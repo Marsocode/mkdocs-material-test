@@ -5,7 +5,6 @@ copyright: Copyright Product Science Inc. All rights reserved.
 nav:
   - Home: index.md
   - Getting Started: getting-started.md
-    # - Mobile App Performance Optimization – what is it?: getting-started.md
   - Essentials Steps: essentials-steps.md
   - Working with PS tool: working-with-ps-tool.md
   - Dictionary: dictionary.md
@@ -52,7 +51,7 @@ theme:
     - toc.integrate
 
 extra_css:
-- stylesheets/extra.css
+  - stylesheets/extra.css
 
 markdown_extensions:
   - toc:
@@ -74,6 +73,11 @@ markdown_extensions:
       alternate_style: true
 
 plugins:
+  - glightbox:
+     loop: false
+     effect: zoom
+    #  slide_effect: none
+     auto_caption: false
   - minify:
       minify_html: false
   - search

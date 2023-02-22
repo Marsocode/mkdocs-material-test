@@ -11,6 +11,11 @@ body {
   --md-primary-fg-color--dark:  #90030C;
 } */
 
+ul li::marker {
+  font-size: 12px;
+  color: #4A4A4A;
+}
+
 .md-typeset hr {
   margin-top: 60px;
   margin-bottom: 56px;
@@ -149,7 +154,7 @@ body {
 @media screen and (min-width: 76.25em) {
   [dir=ltr] .md-nav--integrated>.md-nav__list>.md-nav__item--active .md-nav--secondary {
     border-left: 1px solid rgba(0, 0, 0, 0.14);
-}
+  }
 }
 
 .md-nav--integrated>.md-nav__list>.md-nav__item--active .md-nav--secondary {
@@ -168,6 +173,25 @@ body {
   border-radius: 8px;
 }
 
+/* Code title */
+.md-typeset .tabbed-block>.highlight:first-child>.filename {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.highlight span.filename {
+  background-color: #F7F7F7;
+  display: flow-root;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.highlight span.filename + pre {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Code blocks */
 div[class*=language-] {
   margin: 20px 0;
 }
@@ -187,6 +211,7 @@ div[class*=language-] {
   font-size: 13px;
   line-height: 130%;
   letter-spacing: 0.01em;
+  background: #F7F7F7;
 }
 
 .md-typeset p code {
@@ -194,4 +219,8 @@ div[class*=language-] {
   font-weight: 500;
   font-size: 16px;
   background: none;
+}
+
+.md-typeset a {
+  color: #495bfb;
 }

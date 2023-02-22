@@ -411,12 +411,14 @@ There are three static methods used to annotate user flows:
 Each of these methods take an integer argument (UserFlow ID) and a nullable String argument (comment).
 
 **1. Starting a UserFlow**
+
 To start a UserFlow, call `UserFlow#start` and pass it an ID and a String message.
 ```kotlin
 UserFlow.start(1, "App start begins")
 ```
 
 **2. Annotations UserFlow's milestones**
+
 While a UserFlow is in progress, you can make calls to `UserFlow#custom` passing the UserFlow ID and a String message. 
 This can be useful to annotate events along the UserFlow (e.g., reaching a milestone or annotating different conditional paths among others).
 ```kotlin
@@ -424,22 +426,26 @@ UserFlow.custom(1, "UserFlow hit milestone")
 ```    
 
 **3. Ending a UserFlow**
+
 To end a UserFlow, call `UserFlow#end` passing the ID of the UserFlow to end and a String message.
 ```kotlin
 UserFlow.end(1, "App start complete")
 ```
     
 **Examples**
+
 **UserFlow Annotations on PSTool**
 
 ![trace](./images/essentials_steps/userflow-trace_modal.png)
 
 **Sample app**
+
 There is a sample app demonstrating the use of the userflow library at:
 [https://github.com/product-science/demoapps-private/tree/main/Android/userflow-android-example](https://github.com/product-science/demoapps-private/tree/main/Android/userflow-android-example)
 
 
 **Project Integration**
+
 By default, UserFlow Annotations are added to traces only when Product Science plugin is applied.
 To annotate user flows without applying the plugin, call `UserFlow#setAlwaysAnnotate(true)`.   
 
@@ -667,11 +673,11 @@ Record the trace and video by running your instrumented app on the target device
 **Record your phone screen (Source: [Google](https://support.google.com/android/answer/9075928?hl=en))**
 
 1. Swipe down twice from the top of your screen.
-2. Tap Screen record ![screen recording button](./images/essentials_steps/tap_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"}
+2. Tap Screen record ![screen recording button](./images/essentials_steps/tap_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"}
     * You might need to swipe right to find it
-    * If it's not there, tap Edit ![edit button](./images/essentials_steps/edit_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} and drag Screen record ![screen recording button](./images/essentials_steps/tap_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} to your Quick Settings
+    * If it's not there, tap Edit ![edit button](./images/essentials_steps/edit_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} and drag Screen record ![screen recording button](./images/essentials_steps/tap_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;;"} to your Quick Settings
 3. Choose what you want to record and tap Start. The recording begins after the countdown.
-4. To stop recording, swipe down from the top of the screen and tap the Screen recorder notification ![screen recording button](./images/essentials_steps/tap_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"}
+4. To stop recording, swipe down from the top of the screen and tap the Screen recorder notification ![screen recording button](./images/essentials_steps/tap_screen_record.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"}
 
 **How to record when there is no screen recorder feature**
 
@@ -679,7 +685,7 @@ We recommend you to download 3rd party apps such as [Screen Recorder - XRecorder
 
 **Find screen recordings (Source: [Google](https://support.google.com/android/answer/9075928?hl=en))**
 
-1. Open your phone's Photos app ![google_photos_app_icon](./images/essentials_steps/google_photos_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"}
+1. Open your phone's Photos app ![google_photos_app_icon](./images/essentials_steps/google_photos_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"}
 2. Tap Library > Movies
 
 ##### Record trace
@@ -743,11 +749,11 @@ Install the app you [instrumented in the previous steps](/essentials-steps/#inst
 
 **Record your phone screen (Source: [Apple](https://support.google.com/android/answer/9075928?hl=en))**
 
-1. Go to Settings > Control Center, then tap the Add button ![add button](./images/essentials_steps/ios_control_settings_add_button.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} next to Screen Recording.
+1. Go to Settings > Control Center, then tap the Add button ![add button](./images/essentials_steps/ios_control_settings_add_button.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"} next to Screen Recording.
 2. [Open Control Center on your iPhone](https://support.apple.com/kb/HT202769), or on your [iPad](https://support.apple.com/kb/HT210974).
-3. Tap the gray Record button ![ios record button](./images/essentials_steps/ios_record_button.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"}, then wait for the three-second countdown.
+3. Tap the gray Record button ![ios record button](./images/essentials_steps/ios_record_button.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"}, then wait for the three-second countdown.
 4. Exit Control Center to record your screen.
-5. To stop recording, open Control Center, then tap the red Record button ![ios stop record button](./images/essentials_steps/ios_stop_record_button.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"}. Or tap the red status bar at the top of your screen and tap Stop.
+5. To stop recording, open Control Center, then tap the red Record button ![ios stop record button](./images/essentials_steps/ios_stop_record_button.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"}. Or tap the red status bar at the top of your screen and tap Stop.
 
 **Find screen recordings**
 
@@ -764,11 +770,11 @@ Step | To record App Start Flow | To record any Flow other than App Start
 1 | [Kill the targeted app](https://support.google.com/android/answer/9079646?hl=en#zippy=%2Cclose-apps)| [Kill the targeted app](https://support.google.com/android/answer/9079646?hl=en#zippy=%2Cclose-apps)
 2 | Make sure you are logged in to our PS Companion App.| Make sure you are logged in to our PS Companion App.
 3 | [Start screen recording (optional)*.](https://support.google.com/android/answer/9075928?hl=en) | Open the targeted app.
-4 | ![ios_start_rec](./images/essentials_steps/ios_start_rec.png){style="display: block;padding-bottom:5px;border-radius: 5px;"} Tap the ![rec_icon](./images/essentials_steps/rec_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} button on PS Companion App to start recording | Perform the user actions from the(user) flow and **stop before the last step.**
+4 | ![ios_start_rec](./images/essentials_steps/ios_start_rec.png){style="display: block;margin: 0;padding-bottom:5px;border-radius: 5px;"} Tap the ![rec_icon](./images/essentials_steps/rec_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"} button on PS Companion App to start recording | Perform the user actions from the(user) flow and **stop before the last step.**
 5 | Open the targeted app.| [Start screen recording (optional)*.](https://support.google.com/android/answer/9075928?hl=en)
-6 | Perform the user actions from the [(user) flow](/dictionary/#user-flow) and that you want to optimize. |  ![ios_start_rec](./images/essentials_steps/ios_start_rec.png){style="display: block;padding-bottom:5px;border-radius: 5px;"} Tap the ![rec_icon](./images/essentials_steps/rec_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} button on PS Companion App to start recording
+6 | Perform the user actions from the [(user) flow](/dictionary/#user-flow) and that you want to optimize. |  ![ios_start_rec](./images/essentials_steps/ios_start_rec.png){style="display: block;margin: 0;padding-bottom:5px;border-radius: 5px;"} Tap the ![rec_icon](./images/essentials_steps/rec_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"} button on PS Companion App to start recording
 7 | - | Perform the last step from the (user) flow.
-8 | ![ios_stop_rec](./images/essentials_steps/ios_stop_rec.png){style="display: block;padding-bottom:5px;border-radius: 5px;"} Once the final step is fully loaded, tap the button ![share_square_icon](./images/essentials_steps/share_square_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: 1px;"} to stop recording. | ![ios_stop_rec](./images/essentials_steps/ios_stop_rec.png){style="display: block;padding-bottom:5px;border-radius: 5px;"} Once the final step is fully loaded, tap the button ![share_square_icon](./images/essentials_steps/share_square_icon.png){style="display: inline-block;width: 25px;height:25px;margin: 0 2px;margin-bottom: 1px;"} to stop recording.
+8 | ![ios_stop_rec](./images/essentials_steps/ios_stop_rec.png){style="display: block;margin: 0;padding-bottom:5px;border-radius: 5px;"} Once the final step is fully loaded, tap the button ![share_square_icon](./images/essentials_steps/share_square_icon.png){style="display: inline-block; width: 25px; height:25px; margin: 0 2px; margin-bottom: -5px;"} to stop recording. | ![ios_stop_rec](./images/essentials_steps/ios_stop_rec.png){style="display: block;margin: 0;padding-bottom:5px;border-radius: 5px;"} Once the final step is fully loaded, tap the button ![share_square_icon](./images/essentials_steps/share_square_icon.png){style="display: inline-block;width: 25px;height:25px;margin: 0 2px;margin-bottom: -5px;"} to stop recording.
 
 _________________
 
